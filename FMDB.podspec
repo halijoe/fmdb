@@ -33,7 +33,6 @@ Pod::Spec.new do |s|
   # build the custom version of sqlite3
   s.subspec 'custom' do |ss|
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DFMDB_SQLITE_CUSTOM' }
-    ss.dependency 'sqlite3'
     ss.source_files = 'src/fmdb/FM*.{h,m}'
     ss.exclude_files = 'src/fmdb.m'
   end
